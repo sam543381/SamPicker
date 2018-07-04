@@ -1,3 +1,10 @@
+# Screenshots
+![Pic 1](https://github.com/sam543381/SamPicker/raw/master/1.png)
+
+![Pic 2](https://github.com/sam543381/SamPicker/raw/master/2.png)
+
+![Pic 3](https://github.com/sam543381/SamPicker/raw/master/3.png)
+
 # Samsam
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
