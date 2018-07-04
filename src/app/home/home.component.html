@@ -1,0 +1,21 @@
+<form>
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend uk-text-center">Who'll be Sam tonight ?</legend>
+
+        <div class="uk-margin">
+            <div *ngFor="let field of fields ; let i = index" class="uk-container">
+
+                <div class="uk-inline uk-flex">
+                    <button *ngIf="i != fields.length - 1" class="uk-form-icon" uk-icon="icon: trash" (click)="removeField(field.id)"></button>
+                    <button *ngIf="i == fields.length - 1" class="uk-form-icon" uk-icon="icon: plus" (click)="addField()"></button>
+                    <input [id]="'input#' + field.id" class="name-input uk-input" type="text" placeholder="Enter name">
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <button *ngIf="!picked" (click)="submit()" class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom">Pick your Sam</button>
+    <h3 *ngIf="picked" class="bold white">Tonight, Sam will be <strong>{{ picked | uppercase }}</strong></h3>
+</form>

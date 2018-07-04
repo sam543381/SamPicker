@@ -1,0 +1,16 @@
+<nav id="navbar" class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li *ngFor="let item of items">
+                <a [routerLink]="item.route">{{ item.title }}</a>
+                <div *ngIf="item.children" class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li *ngFor="let child of item.children">
+                            <a [routerLink]="child.route" [class.uk-nav-header]="child.header" [class.uk-nav-divider]="child.divider">{{ child.title }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

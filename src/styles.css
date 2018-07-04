@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #00ff55;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.big {
+    font-size: 1.7em;
+}
+
+.white {
+    color: white;
+}
+
+uppercase {
+    text-transform: uppercase;
+}
