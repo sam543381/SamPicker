@@ -30,17 +30,24 @@ export class HomeComponent implements OnInit {
   }
 
   addField() {
+    let id = Math.floor(Math.random() * 10000)
     this.fields.push({
       value: null,
-      id: Math.floor(Math.random() * 10000)
+      id: id
     })
     this.picked = undefined
+    setTimeout(()=>document.getElementById(`input#${id}`).focus())
   }
 
   removeField(id: number) {
     let index = this.fields.findIndex((val, i) => val.id === id)
     this.fields.splice(index, 1)
     this.picked = undefined
+  }
+
+  onEnterPressed(event: KeyboardEvent) {
+    event.preventDefault()
+    this.addField()
   }
 
 }
